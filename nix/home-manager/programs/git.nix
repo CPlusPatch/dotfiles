@@ -1,5 +1,6 @@
 { ... }: {
   programs.git = {
+    enable = true;
     userName = "Jesse Wierzbinski";
     userEmail = "contact@cpluspatch.com";
     extraConfig = {

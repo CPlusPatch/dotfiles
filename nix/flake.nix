@@ -31,7 +31,6 @@
                 nix-vscode-extensions.overlays.default
               ];
             }
-            ./configuration.nix
             ./machines/hacktop
           ];
           specialArgs = { inherit inputs; };
