@@ -6,7 +6,7 @@
     vesktop
     eyedropper
     fragments
-    ghostty
+    #ghostty
     gimp
     gnome-boxes
     gnome-color-manager

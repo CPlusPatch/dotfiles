@@ -12,7 +12,7 @@
       cat = "bat";
       docker-up = "docker-compose up -d";
       docker-down = "docker-compose down";
-      rebuild = "sudo nixos-rebuild switch --flake './nix#hacktop'";
+      rebuild = "sudo nixos-rebuild switch --flake '/home/jessew/dotfiles/nix#hacktop'";
     };
     history = {
       append = true;

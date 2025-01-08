@@ -1,24 +1,6 @@
 { lib, config, ... }:
 with lib.hm.gvariant; {
   dconf.settings = {
-    "org/gnome/Weather" = {
-      locations = [
-        (mkVariant [
-          (mkUint32 2)
-          (mkVariant [
-            "Troyes"
-            "LFQB"
-            true
-            [ (mkTuple [ 0.8435757993128286 7.010406410620307e-2 ]) ]
-            [ (mkTuple [ 0.8429940287132611 7.126760530533761e-2 ]) ]
-          ])
-        ])
-      ];
-      window-height = 497;
-      window-maximized = false;
-      window-width = 992;
-    };
-
     "org/gnome/desktop/background" = {
       picture-uri =
         "file://${config.home.homeDirectory}/Cloud/Wallpapers/Helldivers/omens of tyranny.jpg";
@@ -37,7 +19,7 @@ with lib.hm.gvariant; {
       font-hinting = "slight";
       font-name = "Inter Variable 11";
       enable-animations = true;
-      monospace-font-name = "JetBrainsMono Nerd Font Mono 10";
+      monospace-font-name = "JetBrains Mono 10";
       show-battery-percentage = true;
     };
 
@@ -169,21 +151,6 @@ with lib.hm.gvariant; {
       preferred-monitor = -2;
       preferred-monitor-by-connector = "eDP-2";
       preview-size-scale = 0.0;
-    };
-    "org/gnome/shell/weather" = {
-      automatic-location = true;
-      locations = [
-        (mkVariant [
-          (mkUint32 2)
-          (mkVariant [
-            "Troyes"
-            "LFQB"
-            true
-            [ (mkTuple [ 0.8435757993128286 7.010406410620307e-2 ]) ]
-            [ (mkTuple [ 0.8429940287132611 7.126760530533761e-2 ]) ]
-          ])
-        ])
-      ];
     };
     "org/gnome/gnome-screenshot" = { default-file-type = "webp"; };
   };

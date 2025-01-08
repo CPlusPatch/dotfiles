@@ -2,6 +2,7 @@
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
+    user = "jessew";
     settings = {
       devices = {
         "lexi" = {
@@ -19,7 +20,7 @@
       folders = {
         "cloud" = {
           path = "/home/jessew/Cloud";
-          devices = [ "lexi" "wheatley" ];
+          devices = [ "wheatley" ];
           ignorePerms = false;
           label = "Cloud";
         };

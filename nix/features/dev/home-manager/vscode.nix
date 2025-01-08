@@ -6,7 +6,6 @@
       mrmlnc.vscode-json5
       editorconfig.editorconfig
       gruntfuggly.todo-tree
-      tyriar.luna-paint
       ms-toolsai.jupyter-keymap
       twxs.cmake
       slevesque.shader
@@ -65,20 +64,15 @@
       github.vscode-pull-request-github
       prisma.prisma
       oven.bun-vscode
-      ms-toolsai.jupyter
       github.vscode-pull-request-github
       github.copilot-chat
-      deque-systems.vscode-axe-linter
       github.vscode-pull-request-github
-      ms-toolsai.jupyter
       github.copilot-chat
       github.copilot-chat
-      ms-toolsai.jupyter
       bradlc.vscode-tailwindcss
       tamasfe.even-better-toml
       antfu.unocss
       nuxtr.nuxt-vscode-extentions
-      codeium.codeium
       unifiedjs.vscode-mdx
       dabolus.uncanny-cognitive-complexity
       ms-vscode.js-debug
@@ -96,80 +90,175 @@
       github.copilot-chat
     ];
     userSettings = {
-      "window" = {
-        "titleBarStyle" = "custom";
-        "dialogStyle" = "custom";
-      };
-      "workbench" = { "iconTheme" = "material-icon-theme"; };
-      "git" = {
-        "enableSmartCommit" = true;
-        "autofetch" = true;
-        "confirmSync" = false;
-      };
-      "github" = {
-        "copilot" = {
-          "enable" = {
-            "*" = true;
-            "plaintext" = true;
-            "markdown" = true;
-            "scminput" = false;
-          };
-          "editor" = { "enableAutoCompletions" = true; };
-        };
-      };
-      "gitlens" = {
-        "ai" = {
-          "experimental" = {
-            "provider" = "openai";
-            "openai" = { "model" = "gpt-4-32k"; };
-          };
-        };
-      };
-      "extensions" = { "ignoreRecommendations" = true; };
-      "editor" = {
-        "formatOnSave" = true;
-        "quickSuggestions" = { "strings" = true; };
-        "detectIndentation" = false;
-        "wordWrap" = "on";
-        "fontFamily" = "'JetBrainsMono NF', 'monospace', monospace";
-      };
-      "eslint" = { "format" = { "enable" = true; }; };
-      "files" = {
-        "autoSave" = "onFocusChange";
-        "associations" = { "*.css" = "tailwindcss"; };
-      };
-      "tailwindCSS" = { "includeLanguages" = { "markdown" = "html"; }; };
-      "workbench" = {
-        "editorAssociations" = {
-          "*.png" = "imagePreview.previewEditor";
-          "*.webp" = "imagePreview.previewEditor";
-        };
-      };
-      "languageToolLinter" = {
-        "languageTool" = { "motherTongue" = "fr"; };
-        "serviceType" = "public";
-      };
-      "nuxtr" = {
-        "defaultPackageManager" = "Bun";
-        "vueFiles" = { "style" = { "addStyleTag" = false; }; };
-      };
-      "diffEditor" = { "ignoreTrimWhitespace" = false; };
-      "dev" = { "containers" = { "dockerPath" = "/usr/bin/docker"; }; };
-      "svelte" = { "enable-ts-plugin" = true; };
-      "sherlock" = {
-        "userId" = "deaf19be-72da-43e6-83f0-28a996b663da";
-        "inlineAnnotations" = { "enabled" = true; };
-      };
-      "svg" = { "preview" = { "mode" = "svg"; }; };
-      "[vue]" = { "editor.defaultFormatter" = "biomejs.biome"; };
-      "[typescriptreact]" = { "editor.defaultFormatter" = "biomejs.biome"; };
-      "[mdx]" = { "editor.defaultFormatter" = "unifiedjs.vscode-mdx"; };
-      "[json]" = { "editor.defaultFormatter" = "biomejs.biome"; };
-      "[jsonc]" = { "editor.defaultFormatter" = "biomejs.biome"; };
-      "[css]" = { "editor.defaultFormatter" = "biomejs.biome"; };
-      "[python]" = { "editor.defaultFormatter" = "ms-python.black-formatter"; };
-      "[typescript]" = { "editor.defaultFormatter" = "biomejs.biome"; };
-      "[cpp]" = { "editor.defaultFormatter" = "ms-vscode.cpptools"; };
+  explorer = {
+    confirmDelete = false;
+  };
+
+  files = {
+    autoSave = "onFocusChange";
+    associations = {
+      "*.css" = "tailwindcss";
     };
+  };
+
+  editor = {
+    insertSpaces = false;
+    fontFamily = "JetBrainsMono Nerd Font Mono";
+    fontLigatures = true;
+    detectIndentation = false;
+    suggestSelection = "first";
+    cursorBlinking = "phase";
+    cursorSmoothCaretAnimation = true;
+    defaultFormatter = "esbenp.prettier-vscode";
+    formatOnPaste = true;
+    linkedEditing = true;
+  };
+
+  python = {
+    languageServer = "Pylance";
+  };
+
+  todo-tree = {
+    tree = {
+      showScanModeButton = false;
+    };
+  };
+
+  git = {
+    autofetch = true;
+    enableSmartCommit = true;
+    confirmSync = false;
+    enableCommitSigning = true;
+  };
+
+  beautify = {
+    language = {
+      html = [ "html" "php" "erb" ];
+      css = [];
+      js = [];
+    };
+  };
+
+  workbench = {
+    colorTheme = "Dark Modern";
+    editorAssociations = {
+      "*.ipynb" = "jupyter.notebook.ipynb";
+    };
+    iconTheme = "material-icon-theme";
+    productIconTheme = "fluent-icons";
+  };
+
+  scm = {
+    inputFontFamily = "editor";
+  };
+
+  debug = {
+    console = {
+      fontFamily = "editor";
+    };
+  };
+
+  terminal = {
+    integrated = {
+      fontFamily = "JetBrainsMono Nerd Font Mono";
+      defaultProfile = {
+        linux = "zsh";
+      };
+    };
+  };
+
+  vsintellicode = {
+    modify = {
+      editor = {
+        suggestSelection = "automaticallyOverrodeDefaultValue";
+      };
+    };
+  };
+
+  security = {
+    workspace = {
+      trust = {
+        enabled = false;
+      };
+    };
+  };
+
+  "[javascript]" = {
+    editor = {
+      defaultFormatter = "esbenp.prettier-vscode";
+    };
+  };
+
+  "[dart]" = {
+    editor = {
+      formatOnSave = true;
+      formatOnType = true;
+      rulers = [ 80 ];
+      selectionHighlight = false;
+      suggest.snippetsPreventQuickSuggestions = false;
+      suggestSelection = "first";
+      tabCompletion = "onlySnippets";
+      wordBasedSuggestions = false;
+    };
+  };
+
+  vsicons = {
+    dontShowNewVersionMessage = true;
+  };
+
+  github = {
+    copilot = {
+      enable = {
+        "*" = true;
+        yaml = false;
+        plaintext = true;
+        markdown = true;
+      };
+    };
+    pullRequests = {
+      createOnPublishBranch = "never";
+    };
+  };
+
+  javascript = {
+    updateImportsOnFileMove = {
+      enabled = "always";
+    };
+  };
+
+  redhat = {
+    telemetry = {
+      enabled = false;
+    };
+  };
+
+  window = {
+    titleBarStyle = "custom";
+    commandCenter = true;
+  };
+
+  prettier = {
+    bracketSameLine = true;
+    tabWidth = 4;
+    useTabs = true;
+  };
+
+  typescript = {
+    updateImportsOnFileMove = {
+      enabled = "always";
+    };
+  };
+
+  "[css]" = {
+    editor = {
+      defaultFormatter = "vscode.css-language-features";
+    };
+  };
+
+  telemetry = {
+    telemetryLevel = "off";
+  };
+};
+
   };
 }

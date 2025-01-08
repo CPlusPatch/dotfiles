@@ -7,7 +7,7 @@
   ];
 
   console = {
-    font = "JetBrainsMono";
+    #font = "JetBrains Mono";
     keyMap = "fr";
     packages = with pkgs; [ jetbrains-mono ];
   };
@@ -43,7 +43,7 @@
       atomix # puzzle game
       evince # document viewer, replaced by papers
       geary # email reader
-      gnome-console
+      #gnome-console
       gnome-photos
       gnome-terminal
       gnome-tour
@@ -78,5 +78,5 @@
 
   users.users.jessew.extraGroups = [ "adbusers" "video" ];
 
-  fonts.packages = with pkgs; [ inter jetbrains-mono ];
+  fonts.packages = with pkgs; [ inter nerd-fonts.jetbrains-mono ];
 }

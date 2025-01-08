@@ -1,6 +1,8 @@
 { inputs, pkgs, ... }:
 let fenixPkgs = inputs.fenix.packages.${pkgs.stdenv.system};
 in {
+  imports = [ ./vscode.nix ];
+  
   home = {
 
     file.".config/ghostty/config".text = ''
