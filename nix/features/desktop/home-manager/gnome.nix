@@ -19,7 +19,7 @@ with lib.hm.gvariant; {
       font-hinting = "slight";
       font-name = "Inter Variable 11";
       enable-animations = true;
-      monospace-font-name = "JetBrains Mono 10";
+      monospace-font-name = "JetBrainsMono NFM 10";
       show-battery-percentage = true;
     };
 
@@ -86,11 +86,11 @@ with lib.hm.gvariant; {
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
         "com.mitchellh.ghostty.desktop"
-        "io.github.zen_browser.zen.desktop"
-        "visual-studio-code-insiders.desktop"
+        "steam.desktop"
+        "code.desktop"
         "org.mozilla.Thunderbird.desktop"
         "md.obsidian.Obsidian.desktop"
-        "firefox-developer-edition.desktop"
+        "firefox-devedition.desktop"
         "org.prismlauncher.PrismLauncher.desktop"
       ];
       remember-mount-password = true;

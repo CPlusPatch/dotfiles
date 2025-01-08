@@ -61,13 +61,8 @@
       github.copilot-chat
       ms-python.debugpy
       svelte.svelte-vscode
-      github.vscode-pull-request-github
       prisma.prisma
       oven.bun-vscode
-      github.vscode-pull-request-github
-      github.copilot-chat
-      github.vscode-pull-request-github
-      github.copilot-chat
       github.copilot-chat
       bradlc.vscode-tailwindcss
       tamasfe.even-better-toml
@@ -83,182 +78,199 @@
       ms-vsliveshare.vsliveshare
       eamodio.gitlens
       ms-python.python
-      github.vscode-pull-request-github
-      github.copilot-chat
       github.copilot
-      github.vscode-pull-request-github
-      github.copilot-chat
     ];
     userSettings = {
-  explorer = {
-    confirmDelete = false;
-  };
-
-  files = {
-    autoSave = "onFocusChange";
-    associations = {
-      "*.css" = "tailwindcss";
-    };
-  };
-
-  editor = {
-    insertSpaces = false;
-    fontFamily = "JetBrainsMono Nerd Font Mono";
-    fontLigatures = true;
-    detectIndentation = false;
-    suggestSelection = "first";
-    cursorBlinking = "phase";
-    cursorSmoothCaretAnimation = true;
-    defaultFormatter = "esbenp.prettier-vscode";
-    formatOnPaste = true;
-    linkedEditing = true;
-  };
-
-  python = {
-    languageServer = "Pylance";
-  };
-
-  todo-tree = {
-    tree = {
-      showScanModeButton = false;
-    };
-  };
-
-  git = {
-    autofetch = true;
-    enableSmartCommit = true;
-    confirmSync = false;
-    enableCommitSigning = true;
-  };
-
-  beautify = {
-    language = {
-      html = [ "html" "php" "erb" ];
-      css = [];
-      js = [];
-    };
-  };
-
-  workbench = {
-    colorTheme = "Dark Modern";
-    editorAssociations = {
-      "*.ipynb" = "jupyter.notebook.ipynb";
-    };
-    iconTheme = "material-icon-theme";
-    productIconTheme = "fluent-icons";
-  };
-
-  scm = {
-    inputFontFamily = "editor";
-  };
-
-  debug = {
-    console = {
-      fontFamily = "editor";
-    };
-  };
-
-  terminal = {
-    integrated = {
-      fontFamily = "JetBrainsMono Nerd Font Mono";
-      defaultProfile = {
-        linux = "zsh";
+      explorer = {
+        confirmDelete = false;
       };
-    };
-  };
 
-  vsintellicode = {
-    modify = {
+      files = {
+        autoSave = "onFocusChange";
+        associations = {
+          "*.css" = "tailwindcss";
+        };
+      };
+
       editor = {
-        suggestSelection = "automaticallyOverrodeDefaultValue";
+        insertSpaces = false;
+        fontFamily = "JetBrainsMono Nerd Font Mono";
+        fontLigatures = true;
+        detectIndentation = false;
+        suggestSelection = "first";
+        cursorBlinking = "phase";
+        cursorSmoothCaretAnimation = true;
+        defaultFormatter = "esbenp.prettier-vscode";
+        formatOnPaste = true;
+        linkedEditing = true;
+        formatOnSave = true;
+      };
+
+      python = {
+        languageServer = "Pylance";
+      };
+
+      todo-tree = {
+        tree = {
+          showScanModeButton = false;
+        };
+      };
+
+      git = {
+        autofetch = true;
+        enableSmartCommit = true;
+        confirmSync = false;
+        enableCommitSigning = true;
+      };
+
+      beautify = {
+        language = {
+          html = [ "html" "php" "erb" ];
+          css = [ ];
+          js = [ ];
+        };
+      };
+
+      workbench = {
+        colorTheme = "Dark Modern";
+        editorAssociations = {
+          "*.ipynb" = "jupyter.notebook.ipynb";
+        };
+        iconTheme = "material-icon-theme";
+        productIconTheme = "fluent-icons";
+      };
+
+      scm = {
+        inputFontFamily = "editor";
+      };
+
+      debug = {
+        console = {
+          fontFamily = "editor";
+        };
+      };
+
+      terminal = {
+        integrated = {
+          fontFamily = "JetBrainsMono Nerd Font Mono";
+          defaultProfile = {
+            linux = "zsh";
+          };
+        };
+      };
+
+      vsintellicode = {
+        modify = {
+          editor = {
+            suggestSelection = "automaticallyOverrodeDefaultValue";
+          };
+        };
+      };
+
+      security = {
+        workspace = {
+          trust = {
+            enabled = false;
+          };
+        };
+      };
+
+      "[javascript]" = {
+        editor = {
+          defaultFormatter = "esbenp.prettier-vscode";
+        };
+      };
+
+      "[dart]" = {
+        editor = {
+          formatOnType = true;
+          rulers = [ 80 ];
+          selectionHighlight = false;
+          suggest.snippetsPreventQuickSuggestions = false;
+          suggestSelection = "first";
+          tabCompletion = "onlySnippets";
+          wordBasedSuggestions = false;
+        };
+      };
+
+      "[nix]" = {
+        editor = {
+          defaultFormatter = "jnoortheen.nix-ide";
+        };
+      };
+
+      vsicons = {
+        dontShowNewVersionMessage = true;
+      };
+
+      github = {
+        copilot = {
+          enable = {
+            "*" = true;
+            yaml = false;
+            plaintext = true;
+            markdown = true;
+          };
+        };
+        pullRequests = {
+          createOnPublishBranch = "never";
+        };
+      };
+
+      javascript = {
+        updateImportsOnFileMove = {
+          enabled = "always";
+        };
+      };
+
+      redhat = {
+        telemetry = {
+          enabled = false;
+        };
+      };
+
+      window = {
+        titleBarStyle = "custom";
+        commandCenter = true;
+      };
+
+      prettier = {
+        bracketSameLine = true;
+        tabWidth = 4;
+        useTabs = true;
+      };
+
+      typescript = {
+        updateImportsOnFileMove = {
+          enabled = "always";
+        };
+      };
+
+      "[css]" = {
+        editor = {
+          defaultFormatter = "vscode.css-language-features";
+        };
+      };
+
+      telemetry = {
+        telemetryLevel = "off";
+      };
+
+      sherlock = {
+        userId = "ed65f52d-53aa-49cb-9302-a1291faecd28";
+      };
+
+      nix = {
+        enableLanguageServer = true;
+        serverSettings = {
+          nil = {
+            formatting = {
+              command = [ "nixpkgs-fmt" ];
+            };
+          };
+        };
       };
     };
-  };
-
-  security = {
-    workspace = {
-      trust = {
-        enabled = false;
-      };
-    };
-  };
-
-  "[javascript]" = {
-    editor = {
-      defaultFormatter = "esbenp.prettier-vscode";
-    };
-  };
-
-  "[dart]" = {
-    editor = {
-      formatOnSave = true;
-      formatOnType = true;
-      rulers = [ 80 ];
-      selectionHighlight = false;
-      suggest.snippetsPreventQuickSuggestions = false;
-      suggestSelection = "first";
-      tabCompletion = "onlySnippets";
-      wordBasedSuggestions = false;
-    };
-  };
-
-  vsicons = {
-    dontShowNewVersionMessage = true;
-  };
-
-  github = {
-    copilot = {
-      enable = {
-        "*" = true;
-        yaml = false;
-        plaintext = true;
-        markdown = true;
-      };
-    };
-    pullRequests = {
-      createOnPublishBranch = "never";
-    };
-  };
-
-  javascript = {
-    updateImportsOnFileMove = {
-      enabled = "always";
-    };
-  };
-
-  redhat = {
-    telemetry = {
-      enabled = false;
-    };
-  };
-
-  window = {
-    titleBarStyle = "custom";
-    commandCenter = true;
-  };
-
-  prettier = {
-    bracketSameLine = true;
-    tabWidth = 4;
-    useTabs = true;
-  };
-
-  typescript = {
-    updateImportsOnFileMove = {
-      enabled = "always";
-    };
-  };
-
-  "[css]" = {
-    editor = {
-      defaultFormatter = "vscode.css-language-features";
-    };
-  };
-
-  telemetry = {
-    telemetryLevel = "off";
-  };
-};
 
   };
 }

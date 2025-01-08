@@ -11,6 +11,9 @@
     gnumake
     llvmPackages.clang
     moreutils # For ts
+    nixd
+    nixpkgs-fmt
+    nil
     mkcert
     ninja
     nodejs

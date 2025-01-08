@@ -22,6 +22,8 @@
     unzip
     usbutils # For lsusb
     vhs
+    plocate
+    findutils
     warp
     wget
     btop

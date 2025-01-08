@@ -7,6 +7,9 @@
     initExtra = ''
       export PATH="$HOME/.bun/bin:$PATH"
       export PATH="$HOME/.local/bin:$PATH"
+
+      # Load p10k
+      source $HOME/.p10k.zsh
     '';
     shellAliases = {
       cat = "bat";
