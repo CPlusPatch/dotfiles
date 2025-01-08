@@ -1,0 +1,93 @@
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    p7zip
+    act
+    age
+    amdgpu_top
+    android-studio
+    asciinema
+    bloaty
+    bun
+    clang-tools # For clang-format
+    ckan
+    cloc
+    cmake
+    deno
+    vesktop
+    eyedropper
+    ffmpeg-full
+    file
+    fragments
+    gdb
+    ghostty
+    gimp
+    gnome-boxes
+    gnome-color-manager
+    gnome-power-manager
+    gnomeExtensions.appindicator
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.bluetooth-battery-meter
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.desktop-cube
+    gnomeExtensions.fuzzy-app-search
+    gnomeExtensions.fullscreen-notifications
+    gnomeExtensions.gsconnect
+    gnomeExtensions.lockscreen-extension
+    gnomeExtensions.media-progress
+    gnomeExtensions.pip-on-top
+    gnomeExtensions.privacy-settings-menu
+    gnomeExtensions.user-avatar-in-quick-settings
+    gnomeExtensions.system-monitor
+    gnumake
+    gnutar
+    godot_4
+    gping
+    gtk4
+    jq
+    lftp
+    linuxPackages_latest.perf
+    llvmPackages.clang
+    lshw
+    moreutils # For ts
+    fastfetch
+    magic-wormhole-rs
+    mangohud
+    mkcert
+    ninja
+    nodejs
+    nvd
+    optipng
+    papers
+    pciutils # For lspci
+    (poetry.withPlugins (ps: with ps; [ poetry-plugin-up ]))
+    pre-commit
+    python312
+    python312Packages.black
+    python312Packages.pip
+    qgnomeplatform
+    qgnomeplatform-qt6
+    resources
+    restic
+    scc
+    ungoogled-chromium
+    unrar
+    unzip
+    usbutils # For lsusb
+    vhs
+    vlc
+    warp
+    wasmtime
+    wget
+    which
+    wine64
+    wl-clipboard
+    (fenix.complete.withComponents [
+      "cargo"
+      "clippy"
+      "rust-src"
+      "rustc"
+      "rustfmt"
+    ])
+  ];
+}
