@@ -35,6 +35,21 @@
           ];
           specialArgs = { inherit inputs; };
         };
+
+        qemu = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            {
+              nixpkgs.overlays = [
+                fenix.overlays.default
+                ghostty.overlays.default
+                nix-vscode-extensions.overlays.default
+              ];
+            }
+            ./machines/qemu
+          ];
+          specialArgs = { inherit inputs; };
+        };
       };
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
     };
