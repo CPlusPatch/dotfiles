@@ -5,6 +5,7 @@
     ../../features/lanzaboote.nix
     ../../features/packages.nix
     ../../features/desktop
+    ../../features/zen.nix
     ../../features/dev
     ../../features/ssh.nix
     ../../features/syncthing.nix
