@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../base
+    ../../features/lanzaboote.nix
     ../../features/packages.nix
     ../../features/desktop
     ../../features/dev

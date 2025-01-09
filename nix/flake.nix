@@ -6,6 +6,10 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     ghostty = { url = "github:ghostty-org/ghostty"; };
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -17,13 +21,14 @@
     };
   };
 
-  outputs = { fenix, nixpkgs, ghostty, nix-vscode-extensions, ... }@inputs:
+  outputs = { fenix, nixpkgs, ghostty, nix-vscode-extensions, lanzaboote, ... }@inputs:
     let lib = nixpkgs.lib;
     in {
       nixosConfigurations = {
         hacktop = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            lanzaboote.nixosModules.lanzaboote
             {
               nixpkgs.overlays = [
                 fenix.overlays.default

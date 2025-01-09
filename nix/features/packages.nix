@@ -19,6 +19,7 @@
     resources
     restic
     unrar
+    sbctl
     unzip
     usbutils # For lsusb
     vhs
